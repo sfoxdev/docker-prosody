@@ -22,7 +22,7 @@ RUN groupadd -g $PGID -r prosody && useradd -b /var/lib -m -g $PGID -u $PUID -r 
 ADD https://prosody.im/files/prosody-debian-packages.key /root
 
 ADD install.sh /install.sh
-RUN /install.sh
+RUN chmod +x install.sh && /install.sh
 RUN rm /install.sh
 
 ADD etc/prosody /etc/prosody
