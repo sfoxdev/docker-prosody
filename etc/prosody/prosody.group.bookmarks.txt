@@ -1,0 +1,11 @@
+[support@conference.example.com]
+support1@example.com=Support1
+support2@example.com=Support2
+support3@example.com=Support3
+sfox@example.com=SFox
+
+[dev@conference.example.com]
+dev1@example.com=Dev1
+dev2@example.com=Dev2
+dev3@example.com=Dev3
+sfoxdev@example.com=SFoxDEV

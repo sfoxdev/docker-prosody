@@ -1,0 +1,11 @@
+[Support Team]
+support1@example.com
+support2@example.com
+support3@example.com
+sfox@example.com
+
+[Development Team]
+dev1@example.com
+dev2@example.com
+dev3@example.com
+sfoxdev@example.com
