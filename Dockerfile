@@ -13,10 +13,12 @@ RUN groupadd -g $PGID -r prosody && useradd -b /var/lib -m -g $PGID -u $PUID -r 
 ADD https://prosody.im/files/prosody-debian-packages.key /root
 
 ADD install.sh /install.sh
-ADD etc/prosody /etc/prosody
+
 RUN chmod +x install.sh && /install.sh \
-  && rm /install.sh \
-  && chown -R prosody:prosody /etc/prosody
+  && rm /install.sh
+
+ADD etc/prosody /etc/prosody
+RUN chown -R prosody:prosody /etc/prosody
 
 VOLUME ["/etc/prosody", "/var/lib/prosody", "/var/log/prosody"]
 
