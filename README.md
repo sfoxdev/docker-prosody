@@ -53,34 +53,28 @@ If you would like to use localhost MySQL database, just add -v /var/lib/mysql/my
 
 ----------------------
 Add to Nginx to fix uploads and Bosh:
+```
+location /http-bind {
+    proxy_pass  https://example.com:5281/http-bind;
+    proxy_set_header Host $host;
+    proxy_buffering off;
+    tcp_nodelay on;
+}
 
-`location /http-bind {`
-
-`    proxy_pass  https://example.com:5281/http-bind;`
-
-`    proxy_set_header Host $host;`
-
-`    proxy_buffering off;`
-
-`    tcp_nodelay on;`
-
-`}`
-
-`location /upload {`
-
-`    proxy_pass  https://example.com:5281/upload;`
-`    proxy_set_header Host $host;`
-`    proxy_buffering off;`
-`    tcp_nodelay on;`
-`}`
-
+location /upload {
+    proxy_pass  https://example.com:5281/upload;
+    proxy_set_header Host $host;
+    proxy_buffering off;
+    tcp_nodelay on;
+}
+```
 ---------------------------
 For Movim upload files add fix to Nginx in location section:
 
 https://enable-cors.org/server_nginx.html
 
 or
-
-`add_header 'Access-Control-Allow-Origin' '*';`
-
-`add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';`
+```
+add_header 'Access-Control-Allow-Origin' '*';
+add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+```
