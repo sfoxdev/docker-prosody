@@ -85,7 +85,7 @@ modules_enabled = {
     -- Modern XEPs
     "smacks"; -- XEP-0198, Stream Management
     "smacks_offline";
-    "pinger"; 
+    "pinger";
     "mam"; -- XEP-0313, Message Archive Management (MAM)
     "blocking"; -- XEP-0191, Blocking Command
     "carbons"; -- XEP-0280, Message Carbons
@@ -96,9 +96,9 @@ modules_enabled = {
     --"vjud"; -- Jappix user directory search
     "muc_log";
     --"support_contact";
-    --"reload_modules"; 
+    --"reload_modules";
     --"pubgroups";
-    "group_bookmarks"; 
+    "group_bookmarks";
 };
 
 -- These modules are auto-loaded, but should you want
@@ -163,8 +163,6 @@ s2s_secure_auth = false
 --http_interfaces = { "*" }
 --https_ports = { 5281 }
 --https_interfaces = { "*" }
---VirtualHost = "www.jabber.chaostreffbern.ch"
---VirtualHost = "www.jabber.chaostreff-bern.ch"
 VirtualHost = "localhost"
 --VirtualHost = "www.jabber.example.com"
 VirtualHost = "example.com"
@@ -187,7 +185,7 @@ http_upload_expire_after = 2592000 -- 60*60*24*30 - 30 days
 --http_upload_external_base_url = "https://otr.ddp.chat/upload/"
 --http_upload_external_secret = "L1G0V4RnwFa6L1G0a6L1G0V4RnwFV4RaV4RnwFnwF"
 --http_upload_external_file_size_limit = 104857600 -- 1024*1024*100 - 100 MB
- 
+
 -- Inform prosody about it's public / external Address. This is required
 -- when running Prosody behind a proxy. Used by http_upload and mosh.
 -- We trick all modules into using HTTPS only with this trick.
@@ -281,7 +279,7 @@ sql = {
 log = {
     warn = "/var/log/prosody/prosody.log";
     error = "/var/log/prosody/prosody.err";
-    info = "/var/log/prosody/prosody.info.log"; 
+    info = "/var/log/prosody/prosody.info.log";
     --debug = "/var/log/prosody/prosody.debug.log";
     -- Syslog:
     { levels = { "error" }; to = "syslog";  };
